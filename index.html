@@ -1,33 +1,68 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
+<html lang="en">
 <head>
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Attuned</title>
 
+  <!-- Google Fonts -->
+
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
- 
 <body>
+  
+  <div class="container">
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+          <h1 class="display-4">Logo Here</h1>
+          <p class="lead">Search your favorite artist to see concert listings and get latest album info.</p>
+        </div>
+    </div>
 
+    <div class="row">
+      <div class="col-lg-8 col-md-12">
 
+        <div class="row" id="search">
+          <div class="col-12">
+                
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon1">Search</button>
+              </div>
+              <input type="text" class="form-control" placeholder="Search an artist here..." aria-label="Search input"
+                aria-describedby="search-button">
+            </div>
+                
+          </div>
+        </div>
+
+        <div class="row" id="event-listing">
+          <div class="col-12">
+
+          </div>
+        </div>
+
+        <div class="row" id="album-info">
+          <div class="col-12">
+
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-4 col-md-12" id="favorites">
+
+      </div>
+    </div>
+  </div>
 
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery.js"></script>
 
-    
-
-
-    
-
-
   <!-- Script -->
   <script src="main-script.js"></script>
-
+  
 </body>
-
 </html>
