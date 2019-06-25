@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Attuned: Discover Live</title>
-
-  <!-- Favicon -->
-  <link rel="icon" href="Assets/Attuned-favicon.gif" type="image/gif" sizes="16x16">
+  <title>Attuned</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="CSS/Style.css" type="style/css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="CSS/Style.css">
 
 </head>
 
 <body>
-  
+  <div class="left-image"><a href="https://www.musixmatch.com/"><img src="Assets/musixmatch.png" alt="logo"></a></div>
+
+  <div class="right-image"><a href="https://www.bandsintown.com/"><img src="Assets/bandsintown.png" alt="logo"></a>
+  </div>
+
   <div class="container">
-    <div class="jumbotron jumbotron-fluid text-center">
-        <div class="container">
-          <img src="Assets/Attuned logo white.svg">
-          <p class="lead">Search artists to see latest album info and get concert listings for your area.</p>
-        </div>
+
+    <div><a href="index.html"><img class="logo" src="Assets/logo.png" alt="logo"></a>
     </div>
 
     <div class="row">
-      <div class="col-lg-8 col-md-12">
+      <div class="col-lg-12 col-md-12">
 
-        <div class="row">
-          <div class="col-12" id="search">
-                
+        <div class="row" id="search">
+          <div class="col-12">
+
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <button class="btn btn-outline-secondary" type="button" id="button-addon1">Search</button>
@@ -43,30 +40,25 @@
               <input type="text" class="form-control" placeholder="Search an artist here..." aria-label="Search input"
                 aria-describedby="search-button">
             </div>
-                
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-12" id="multiple-artists">
 
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-12" id="album-info">
+        <div class="row" id="album-info">
+          <div class="col-12">
 
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-12" id="event-listing">
+        <div class="row" id="event-listing">
+          <div class="col-12">
 
           </div>
         </div>
+
+
 
       </div>
-
       <div class="col-lg-4 col-md-12" id="favorites">
 
       </div>
@@ -74,10 +66,11 @@
   </div>
 
   <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
 
   <!-- Script -->
   <script src="main-script.js"></script>
-  
+
 </body>
+
 </html>
