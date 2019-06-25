@@ -1,7 +1,7 @@
 $("#search").on("click",function(){
     alert("works!");
     var APIKey = "kF0IDN1pYNuH8ZYf3jf2yQEPcNC2CHjG";
-    var queryURL = "https://rest.bandsintown.com/artists/" + "Chris Brown" + "?app_id=codingbootcamp;"
+    var queryURL = "https://rest.bandsintown.com/artists/" + $(".artist-value").val() + "?app_id=codingbootcamp;"
 
 
       
