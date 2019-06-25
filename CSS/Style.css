@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+    background-image: url('../Assets/brickwall.jpg');
+    background-position: center;
+    background-repeat: vertical;
+    background-size: cover;
+    height: 100%;
+}
+
+.containter {
+    height: 100%;
+    clear: both;
+}
+
+.row {
+    margin-right: -20px;
+    margin-left: -10px;
+}
+
+.logo {
+    padding: 80px 0 50px;
+}
+
+#album-info {
+    height: 200px;
+    border-radius: 5px;
+    background-color: #c2c2c2;
+    color: #000;
+    margin: 25px auto;
+}
+
+
+#event-listing {
+    height: 500px;
+    border-radius: 5px;
+    background-color: #c2c2c2;
+    color: #000;
+    margin: 0px auto 25px;
+}
+
+.left-image img, .right-image img {
+    width: 35%;
+    padding: 10px 0;
+}
+
+.left-image {
+    float: left;
+    padding-left: 35px;
+    width: 50%;
+}
+
+.right-image {
+    float: right;
+    padding-right: 35px;
+    width: 50%;
+    text-align: right;
+}
+
+
+#button-addon1 {
+    color: #000000;
+}
+
+.input-group {
+    padding: 10px 0;
+}
+
+.input-group-prepend {
+    background-color: #FF9600;
+    border-radius: 5px;
+}
+
+.col-lg-12 { 
+    padding-left: 0px;
+    padding-right: 0px;
+ }
+
+ .form-control {
+     background-color: #212121;
+     border: 2px solid #999999;
+ }
