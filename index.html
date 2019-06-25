@@ -5,15 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Attuned</title>
+  <title>Attuned: Discover Live</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="Assets/Attuned-favicon.gif" type="image/gif" sizes="16x16">
 
   <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="CSS/Style.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="CSS/Style.css" type="style/css">
+  
 </head>
 
 <body>
@@ -30,28 +35,28 @@
     <div class="row">
       <div class="col-lg-12 col-md-12">
 
-        <div class="row" id="search">
-          <div class="col-12">
+        <div class="row">
+          <div class="col-12" id="search">
 
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <button class="btn btn-outline-secondary" type="button" id="button-addon1">Search</button>
               </div>
-              <input type="text" class="form-control" placeholder="Search an artist here..." aria-label="Search input"
+              <input type="text" class="form-control artist-value" placeholder="Search an artist here..." aria-label="Search input"
                 aria-describedby="search-button">
             </div>
 
           </div>
         </div>
 
-        <div class="row" id="album-info">
-          <div class="col-12">
+        <div class="row">
+          <div class="col-12" id="album-info">
 
           </div>
         </div>
 
-        <div class="row" id="event-listing">
-          <div class="col-12">
+        <div class="row">
+          <div class="col-12" id="event-listing">
 
           </div>
         </div>
@@ -65,8 +70,11 @@
     </div>
   </div>
 
+  <!-- Kyanite -->
+  <script src="https://cdn.jsdelivr.net/npm/kyanitev0.13.0/dist/kyanite.js"></script>
+
   <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
   <!-- Script -->
   <script src="main-script.js"></script>
