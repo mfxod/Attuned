@@ -2,6 +2,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.bottom-rule {
+    border-bottom: 1px solid black;
+}
+
 body {
     background-image: url('../Assets/brickwall.jpg');
     background-position: center;
@@ -76,9 +80,9 @@ body {
 .col-lg-12 { 
     padding-left: 0px;
     padding-right: 0px;
- }
+}
 
- .form-control {
+.form-control {
      background-color: #212121;
      border: 2px solid #999999;
- }
+}
