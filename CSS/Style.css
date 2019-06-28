@@ -2,9 +2,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.bottom-rule {
-    border-bottom: 1px solid black;
-}
+
 
 body {
     background-image: url('../Assets/brickwall.jpg');
@@ -36,9 +34,15 @@ body {
     margin: 25px auto;
 }
 
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #000000;
+}
+
 
 #event-listing {
-    height: 500px;
+    /*height: 500px;*/
     border-radius: 5px;
     background-color: #c2c2c2;
     color: #000;
