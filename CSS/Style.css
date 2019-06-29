@@ -26,8 +26,10 @@ body {
     padding: 80px 0 50px;
 }
 
-#album-info {
-    height: 200px;
+#album-info,
+#artist-info,
+#event-listing {
+    /* height: 200px; */
     border-radius: 5px;
     background-color: #c2c2c2;
     color: #000;
@@ -41,13 +43,13 @@ body {
 }
 
 
-#event-listing {
+/* #event-listing { */
     /*height: 500px;*/
-    border-radius: 5px;
+    /* border-radius: 5px;
     background-color: #c2c2c2;
     color: #000;
     margin: 0px auto 25px;
-}
+} */
 
 .left-image img, .right-image img {
     width: 35%;
