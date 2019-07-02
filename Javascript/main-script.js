@@ -63,7 +63,7 @@ $("#button-addon1").on("click", function() {
     };
   });
 
-  // query Bands In Town API for artist image
+  // query Bands In Town API for artist img
   $.ajax({
     url: artistQueryURL,
     method: "GET"
@@ -103,7 +103,7 @@ $("#button-addon1").on("click", function() {
       $(".table").append(eventTr);
     };
   });
-  
+
   emptySections();
   showSections();
   clearSearch();
