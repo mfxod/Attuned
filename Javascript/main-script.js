@@ -37,7 +37,11 @@ function clearSearch() {
 
 hideSections();
 
+<<<<<<< HEAD
 $("#button-addon1").on("click", function () {
+=======
+$("#button-addon1").on("click", function() {
+>>>>>>> 1c507fd4417ddf3da6048d0c92404bd17b89537c
   // Bands in Town API variables
   const bandsAPIKey = "988fa458a5408476aacc624353627825";
   const artistQueryURL = "https://rest.bandsintown.com/artists/" + $(".artist-value").val() + "?app_id=" + bandsAPIKey;
@@ -50,9 +54,15 @@ $("#button-addon1").on("click", function () {
   $.ajax({
     url: lastFMqueryURL,
     method: "GET"
+<<<<<<< HEAD
   }).then(function (response) {
     console.log(response);
 
+=======
+  }).then(function(response) {
+    console.log(response);
+    
+>>>>>>> 1c507fd4417ddf3da6048d0c92404bd17b89537c
     if (response.message === "The artist you supplied could not be found") {
       $("#artist-name-bio").append($("<h4>").text(response.message))
       $("#artist-img").hide();
@@ -67,7 +77,11 @@ $("#button-addon1").on("click", function () {
   $.ajax({
     url: artistQueryURL,
     method: "GET"
+<<<<<<< HEAD
   }).then(function (response) {
+=======
+  }).then(function(response) {
+>>>>>>> 1c507fd4417ddf3da6048d0c92404bd17b89537c
     console.log(response);
 
     $("#artist-img").append($("<img>").attr({
@@ -75,13 +89,21 @@ $("#button-addon1").on("click", function () {
       "src": response.image_url,
       "alt": response.name + "photo"
     }));
+<<<<<<< HEAD
   });
+=======
+  });  
+>>>>>>> 1c507fd4417ddf3da6048d0c92404bd17b89537c
 
   // query Bands In Town API for event listings
   $.ajax({
     url: eventsQueryURL,
     method: "GET"
+<<<<<<< HEAD
   }).then(function (response) {
+=======
+  }).then(function(response) {
+>>>>>>> 1c507fd4417ddf3da6048d0c92404bd17b89537c
 
     console.log(response);
 
@@ -96,14 +118,24 @@ $("#button-addon1").on("click", function () {
         "class": "btn btn-primary",
         "href": response[i].offers[0].url,
         "role": "button"
+<<<<<<< HEAD
       }).text("Tickets"));
       const eventTr = $("<tr>").addClass("bottom-rule");
 
+=======
+        }).text("Tickets"));
+      const eventTr = $("<tr>").addClass("bottom-rule");
+  
+>>>>>>> 1c507fd4417ddf3da6048d0c92404bd17b89537c
       eventTr.append(dateTD, venueTD, buttonTD);
       $(".table").append(eventTr);
     };
   });
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 1c507fd4417ddf3da6048d0c92404bd17b89537c
   emptySections();
   showSections();
   clearSearch();
