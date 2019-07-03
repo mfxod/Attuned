@@ -5,11 +5,11 @@
 
 
 body {
-    background-image: url('../Assets/brickwall.jpg');
+    background-image: url('../Assets/brickwall2.jpg');
     background-position: center;
-    background-repeat: vertical;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-    height: 100%;
 }
 
 .containter {
@@ -30,7 +30,7 @@ body {
 #artist-info,
 #event-listing {
     /* height: 200px; */
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: #c2c2c2;
     color: #000;
     margin: 25px auto;
@@ -39,7 +39,14 @@ body {
 .table td, .table th {
     padding: .75rem;
     vertical-align: top;
-    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    font-size: x-large;
+    border-top: hidden;
+    border-bottom: 3px solid black;
 }
 
 
@@ -52,14 +59,14 @@ body {
 } */
 
 .left-image img, .right-image img {
-    width: 35%;
-    padding: 10px 0;
+    width: 40%;
+    padding: 15px 0;
 }
 
-.left-image {
+.left-image img {
     float: left;
-    padding-left: 35px;
-    width: 50%;
+    padding-left: 50px;
+    width: 15%;
 }
 
 .right-image {
