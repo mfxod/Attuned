@@ -46,20 +46,32 @@ $("#button-addon1").on("click", function() {
   const lastFMkey = "00461b08c2c1c12caf8762c69e5f98f2";
   const lastFMqueryURL = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + $(".artist-value").val() + "&api_key=" + lastFMkey + "&format=json";
 
+    if(!$(".artist-value").val()) {
+        //handle
+        console.log('made it there is no val')
+      $("#artist-name-bio").html("<h4>Please submit an artist!</h4>")
+     // $("#artist-img").hide();
+      //$("#event-listing").hide();       
+        return 
+    }
   // query lastFM API for artist name and album info
   $.ajax({
     url: lastFMqueryURL,
     method: "GET"
   }).then(function(response) {
     console.log(response);
+  
     
     if (response.message === "The artist you supplied could not be found") {
+      console.log("ease our troubled minds!");
       $("#artist-name-bio").append($("<h4>").text(response.message))
       $("#artist-img").hide();
       $("#event-listing").hide();
     } else {
+      var summary = response.artist.bio.summary;
+      var summaryFixed = summary.substring(0,summary.indexOf("<a href"));
       $("#artist-name-bio").append($("<h2>").text(response.artist.name));
-      $("#artist-name-bio").append($("<p>").text(response.artist.bio.summary));
+      $("#artist-name-bio").append($("<p>").text(summaryFixed));
     };
   });
 
