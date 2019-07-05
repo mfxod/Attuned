@@ -2,8 +2,6 @@
     font-family: 'Roboto', sans-serif;
 }
 
-
-
 body {
     background-image: url('../Assets/brickwall2.jpg');
     background-position: center;
@@ -24,49 +22,19 @@ body {
 
 .logo {
     padding: 80px 0 50px;
+    animation-duration: 2s;
 }
-
-#album-info,
-#artist-info,
-#event-listing {
-    /* height: 200px; */
-    border-radius: 2px;
-    background-color: #c2c2c2;
-    color: #000;
-    margin: 25px auto;
-}
-
-.table td, .table th {
-    padding: .75rem;
-    vertical-align: top;
-    border-bottom: 1px solid #000000;
-}
-
-.table thead th {
-    vertical-align: bottom;
-    font-size: x-large;
-    border-top: hidden;
-    border-bottom: 3px solid black;
-}
-
-
-/* #event-listing { */
-    /*height: 500px;*/
-    /* border-radius: 5px;
-    background-color: #c2c2c2;
-    color: #000;
-    margin: 0px auto 25px;
-} */
 
 .left-image img, .right-image img {
     width: 40%;
     padding: 15px 0;
 }
 
-.left-image img {
+.left-image {
     float: left;
-    padding-left: 50px;
-    width: 15%;
+    padding-left: 58px;
+    width: 32%;
+    animation-duration: 5s
 }
 
 .right-image {
@@ -74,8 +42,8 @@ body {
     padding-right: 35px;
     width: 50%;
     text-align: right;
+    animation-duration: 5s
 }
-
 
 #button-addon1 {
     color: #000000;
@@ -83,6 +51,7 @@ body {
 
 .input-group {
     padding: 10px 0;
+    animation-duration: 2.5s;
 }
 
 .input-group-prepend {
@@ -99,3 +68,73 @@ body {
      background-color: #212121;
      border: 2px solid #999999;
 }
+
+#album-info, #artist-info, #event-listing {
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.774);
+    color: #000;
+    margin: 18px auto;
+}
+
+/*---------- Artist Info Box ---------*/
+#artist-info {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    animation-duration: 1.5s;
+    animation-delay: 500ms;
+}
+
+#artist-name-bio {
+    float: right;
+    padding-left: 60px;
+    padding-top: 7px;
+}
+
+#artist-name-bio h1 {
+    font-weight: bolder;
+}
+
+#artist-name-bio p {
+    line-height: 1.6;
+    font-size: 1.3rem;
+    padding-right: 30px;
+}
+
+.artist-img {
+    float: left;
+    padding: 10px;
+}
+/*---------- End Artist Info ---------*/
+
+/*---------- Event Info Box ----------*/
+#event-listing {
+    animation-duration: 1.5s;
+    animation-delay: 500ms;
+}
+
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-bottom: 1px solid #000000;
+}
+
+.btn-primary {
+background-color: #FF9600;
+color: #000;
+border-color: #000;
+width: 130px;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #000;
+    border-color: #FF9600;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    font-size: x-large;
+    border-top: hidden;
+    border-bottom: 3px solid black;
+}
+/*---------- End Event Info ---------*/
