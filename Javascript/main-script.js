@@ -49,10 +49,10 @@ $("#button-addon1").on("click", function() {
   if(!$(".artist-value").val()) {
     //handle
     console.log('made it there is no val')
-    $("#artist-name-bio").append("<h4>Please submit an artist!</h4>")
+    $("#artist-name-bio").html("<h4>Please submit an artist!</h4>")
     $("#artist-info").show()
-    // $("#artist-img").hide();
-    //$("#event-listing").hide();       
+     $("#artist-img").hide();
+    $("#event-listing").hide();       
     return 
   }
 
@@ -74,6 +74,7 @@ $("#button-addon1").on("click", function() {
       const summaryFixed = summary.substring(0,summary.indexOf("<a href"));
       $("#artist-name-bio").append($("<h2>").text(response.artist.name));
       $("#artist-name-bio").append($("<p>").text(summaryFixed));
+      $("#artist-img").show();        
     };
   });
 
