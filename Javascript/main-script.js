@@ -43,7 +43,7 @@ $("#button-addon1").on("click", function () {
   const eventsQueryURL = "https://rest.bandsintown.com/artists/" + $(".artist-value").val() + "/events?app_id=" + bandsAPIKey;
   // LastFM API variables
   const lastFMkey = "00461b08c2c1c12caf8762c69e5f98f2";
-  const lastFMqueryURL = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + $(".artist-value").val() + "&api_key=" + lastFMkey + "&format=json";
+  const lastFMqueryURL = "https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + $(".artist-value").val() + "&api_key=" + lastFMkey + "&format=json";
 
   if (!$(".artist-value").val()) {
     //handle
