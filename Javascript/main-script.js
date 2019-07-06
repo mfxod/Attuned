@@ -1,4 +1,3 @@
-
 // ----- FUNCTIONS -----
 
 function hideSections() {
@@ -46,74 +45,73 @@ $("#button-addon1").on("click", function () {
   const lastFMkey = "00461b08c2c1c12caf8762c69e5f98f2";
   const lastFMqueryURL = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + $(".artist-value").val() + "&api_key=" + lastFMkey + "&format=json";
 
-  if(!$(".artist-value").val()) {
+  if (!$(".artist-value").val()) {
     //handle
-    console.log('made it there is no val')
-    $("#artist-name-bio").html("<h4>Please submit an artist!</h4>")
-    $("#artist-inf o").show()
-     $("#artist-img").hide();
-$("#event-listing").hide();       
-    return 
-  }
+    console.log('made it there is no val');
+    $("#artist-name-bio").html("<h4>Please submit an artist!</h4>");
+    $("#artist-info").show();
+    $("#artist-img").hide();
+    $("#event-listing").hide();
+    return;
+  };
 
   // query lastFM API for artist name and album info
   $.ajax({
     url: lastFMqueryURL,
     method: "GET"
-  }).then(function(response) {
+  }).then(function (response) {
     console.log(response);
-  
-    
+
     if (response.message === "The artist you supplied could not be found") {
       console.log("ease our troubled minds!");
-      $("#artist-name-bio").append($("<h4>").text(response.message))
-      $("#artist-i mg").hide();
+      $("#artist-name-bio").append($("<h4>").text(response.message));
+      $("#artist-img").hide();
       $("#event-listing").hide();
     } else {
       const summary = response.artist.bio.summary;
-      const summaryFixed = summary.substring(0,summary.indexOf("<a href"));
+      const summaryFixed = summary.substring(0, summary.indexOf("<a href"));
       $("#artist-name-bio").append($("<h1>").text(response.artist.name));
       $("#artist-name-bio").append($("<p>").text(summaryFixed));
-      $("#artist-img").show();        
+      $("#artist-img").show();
     };
   });
 
   // query Bands In Town API for artist img
   $.ajax({
     url: artistQueryURL,
-    method: "GET" 
-  }).then(function(response) {
+    method: "GET"
+  }).then(function (response) {
     console.log(response);
 
     $("#artist-img").append($("<img>").attr({
       "class": "artist-img",
-    "src": response.thumb_url,
-    "alt": response.name + "photo"
+      "src": response.thumb_url,
+      "alt": response.name + "photo"
     }));
-  });  
+  });
 
-// query Bands In Town API for event listings
-$.ajax({
-  url:  eventsQueryURL,
+  // query Bands In Town API for event listings
+  $.ajax({
+    url: eventsQueryURL,
     method: "GET"
-  }).then(function(response) {
+  }).then(function (response) {
 
-  console.log(response);
+    console.log(response);
 
     // event listing
     for (var i = 0; i < response.length; i++) {
       const date = dateFns.format(new Date(dateFns.parse(response[i].datetime)), "M/D/YYYY");
       const venue = response[i].venue.name + ", " + response[i].venue.city + ", " + response[i].venue.region + ", " + response[i].venue.country;
 
-    const dateTD = $("<td>").append($("<h4>").addClass("event-date").text(date));
-    const venueTD = $("<td>").addClass("venue-info").text(venue);
+      const dateTD = $("<td>").append($("<h4>").addClass("event-date").text(date));
+      const venueTD = $("<td>").addClass("venue-info").text(venue);
       const buttonTD = $("<td>").append($("<a>").attr({
         "class": "btn btn-primary",
         "href": response[i].offers[0].url,
         "role": "button"
-        }).text("Tickets"));
+      }).text("Tickets"));
       const eventTr = $("<tr>").addClass("bottom-rule");
-  
+
       eventTr.append(dateTD, venueTD, buttonTD);
       $(".table").append(eventTr);
     };
